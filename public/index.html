@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Citizen Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://openrouter.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Government Header Bar -->
+  <header class="gov-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="emblem-placeholder"></div>
+        <div class="app-title">
+          <h1>Election Citizen Services</h1>
+          <h2 class="title-hi">चुनाव नागरिक सेवाएं</h2>
+        </div>
+      </div>
+      <div class="lang-selector">
+        <select id="langDropdown" aria-label="Select Language">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+        <button id="theme-btn" class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          🌓
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar (Desktop) -->
+  <nav class="desktop-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-item active" data-target="module-home">Home</a>
+      <a href="#" class="nav-item" data-target="module-education">Education Hub</a>
+      <a href="#" class="nav-item" data-target="module-assistant">Ask Assistant</a>
+      <a href="#" class="nav-item" data-target="module-timeline">Timeline</a>
+      <a href="#" class="nav-item" data-target="module-polling">Polling Support</a>
+      <a href="#" class="nav-item" data-target="module-results">Results</a>
+      <a href="#" class="nav-item" data-target="module-help">Help</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content" id="main-content">
+    <!-- Home Dashboard Module -->
+    <section id="module-home" class="module active">
+      
+      <!-- Welcome Banner -->
+      <div class="welcome-banner">
+        <div class="flag-stripe"></div>
+        <div class="banner-content">
+          <h2>Welcome Citizen — Your Democratic Guide</h2>
+        </div>
+      </div>
+
+      <!-- Election Countdown Card -->
+      <div class="countdown-card">
+        <h3>Time Remaining to Next Election</h3>
+        <div class="countdown-display">
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-days">000</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-seconds">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions Grid -->
+      <div class="quick-actions-grid">
+        <button class="action-btn" id="btn-open-education">
+          <span class="action-icon">📚</span>
+          <span class="action-label">Understand Election</span>
+        </button>
+        <button class="action-btn">
+          <span class="action-icon">📍</span>
+          <span class="action-label">Find Polling Booth</span>
+        </button>
+        <button class="action-btn">
+          <span class="action-icon">✅</span>
+          <span class="action-label">Check Eligibility</span>
+        </button>
+        <button class="action-btn" id="btn-open-assistant">
+          <span class="action-icon">🤖</span>
+          <span class="action-label">Ask AI Assistant</span>
+        </button>
+        <button class="action-btn">
+          <span class="action-icon">❓</span>
+          <span class="action-label">View FAQs</span>
+        </button>
+        <button class="action-btn">
+          <span class="action-icon">📊</span>
+          <span class="action-label">See Results</span>
+        </button>
+      </div>
+
+      <!-- Latest Notices Section -->
+      <div class="latest-notices">
+        <h3>Latest Official Notices</h3>
+        <div class="notices-list">
+          <div class="notice-card">
+            <div class="notice-date">28 Sep 2026</div>
+            <h4 class="notice-title">Publication of Draft Electoral Roll</h4>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+          <div class="notice-card">
+            <div class="notice-date">15 Sep 2026</div>
+            <h4 class="notice-title">Guidelines for Model Code of Conduct</h4>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+          <div class="notice-card">
+            <div class="notice-date">02 Sep 2026</div>
+            <h4 class="notice-title">Voter Registration Drive Announcement</h4>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Did You Know Ticker -->
+      <div class="fact-ticker">
+        <span class="ticker-badge">Did You Know?</span>
+        <span class="ticker-content" id="ticker-text">India's 2024 election had over 968 million eligible voters.</span>
+      </div>
+    </section>
+
+    <!-- Voter Education Hub Module -->
+    <section id="module-education" class="module">
+      <div class="module-header">
+        <h2 class="module-title">📚 Voter Education Hub</h2>
+        <p class="module-subtitle">Empowering citizens with knowledge for a stronger democracy</p>
+      </div>
+
+      <div class="education-hub-grid">
+        <!-- Section 1: Why Voting Matters -->
+        <div class="edu-card">
+          <button class="edu-card-header" aria-expanded="false" aria-controls="edu-content-1">
+            <span class="edu-icon">🤝</span>
+            <span class="edu-title">Why Voting Matters</span>
+            <span class="edu-toggle-icon">▼</span>
+          </button>
+          <div id="edu-content-1" class="edu-card-body" hidden>
+            <p>Voting is not just a right; it's your voice in the decision-making process of the nation. When you vote, you participate in shaping laws, policies, and the future of your community.</p>
+            <ul>
+              <li><strong>Civic Duty:</strong> It is a fundamental responsibility of every citizen in a democracy.</li>
+              <li><strong>Impact:</strong> Many elections have been decided by a handful of votes. Your vote counts!</li>
+              <li><strong>Historical Significance:</strong> Generations fought for the universal right to vote; honor that legacy by participating.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 2: How to Vote -->
+        <div class="edu-card">
+          <button class="edu-card-header" aria-expanded="false" aria-controls="edu-content-2">
+            <span class="edu-icon">🗳️</span>
+            <span class="edu-title">How to Vote</span>
+            <span class="edu-toggle-icon">▼</span>
+          </button>
+          <div id="edu-content-2" class="edu-card-body" hidden>
+            <div class="edu-steps">
+              <div class="edu-step-item"><span class="step-num">1</span><strong>Search Name:</strong> Verify your name in the electoral roll via ECI website.</div>
+              <div class="edu-step-item"><span class="step-num">2</span><strong>Find Booth:</strong> Locate your assigned polling station.</div>
+              <div class="edu-step-item"><span class="step-num">3</span><strong>ID Check:</strong> Show your Voter ID or approved identification at the booth.</div>
+              <div class="edu-step-item"><span class="step-num">4</span><strong>Ink & Slip:</strong> Officer marks finger with ink and provides a voter slip.</div>
+              <div class="edu-step-item"><span class="step-num">5</span><strong>Cast Vote:</strong> Press the blue button for your candidate on the EVM.</div>
+              <div class="edu-step-item"><span class="step-num">6</span><strong>Verify:</strong> Watch the VVPAT screen for 7 seconds to confirm your choice.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: First Time Voter Guide -->
+        <div class="edu-card">
+          <button class="edu-card-header" aria-expanded="false" aria-controls="edu-content-3">
+            <span class="edu-icon">⭐</span>
+            <span class="edu-title">First Time Voter Guide</span>
+            <span class="edu-toggle-icon">▼</span>
+          </button>
+          <div id="edu-content-3" class="edu-card-body" hidden>
+            <p>Welcome to the democratic process! Use this checklist to ensure you are ready:</p>
+            <div class="checklist-grid">
+              <label class="check-item"><input type="checkbox"> <span>Are you 18 years or older?</span></label>
+              <label class="check-item"><input type="checkbox"> <span>Are you registered as a voter?</span></label>
+              <label class="check-item"><input type="checkbox"> <span>Is your name in the latest Voter List?</span></label>
+              <label class="check-item"><input type="checkbox"> <span>Do you have your Voter ID or Aadhaar ready?</span></label>
+              <label class="check-item"><input type="checkbox"> <span>Do you know your polling booth location?</span></label>
+              <label class="check-item"><input type="checkbox"> <span>Have you researched your local candidates?</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Voter Rights -->
+        <div class="edu-card">
+          <button class="edu-card-header" aria-expanded="false" aria-controls="edu-content-4">
+            <span class="edu-icon">⚖️</span>
+            <span class="edu-title">Voter Rights</span>
+            <span class="edu-toggle-icon">▼</span>
+          </button>
+          <div id="edu-content-4" class="edu-card-body" hidden>
+            <ul class="rights-list">
+              <li><strong>Right to Secrecy:</strong> Your vote is 100% anonymous. No one can force you to reveal it.</li>
+              <li><strong>Right to Information:</strong> Know the background and assets of every candidate.</li>
+              <li><strong>NOTA Option:</strong> Right to reject all candidates if you find none suitable.</li>
+              <li><strong>Assistance:</strong> Right to take a companion if you are blind or infirm.</li>
+              <li><strong>Tendered Vote:</strong> Right to vote via paper ballot if someone already voted in your name.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 5: Election Myths vs Facts -->
+        <div class="edu-card">
+          <button class="edu-card-header" aria-expanded="false" aria-controls="edu-content-5">
+            <span class="edu-icon">🧐</span>
+            <span class="edu-title">Election Myths vs Facts</span>
+            <span class="edu-toggle-icon">▼</span>
+          </button>
+          <div id="edu-content-5" class="edu-card-body" hidden>
+            <div class="myth-fact-item">
+              <div class="myth-label">Myth</div><p>EVMs can be hacked via WiFi or Bluetooth.</p>
+              <div class="fact-label">Fact</div><p>EVMs are standalone devices with no wireless or internet connectivity.</p>
+            </div>
+            <div class="myth-fact-item">
+              <div class="myth-label">Myth</div><p>If NOTA wins, the election is cancelled.</p>
+              <div class="fact-label">Fact</div><p>Current rules state the candidate with second-highest votes is declared winner.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 6: Fake News Awareness -->
+        <div class="edu-card">
+          <button class="edu-card-header" aria-expanded="false" aria-controls="edu-content-6">
+            <span class="edu-icon">🛡️</span>
+            <span class="edu-title">Fake News Awareness</span>
+            <span class="edu-toggle-icon">▼</span>
+          </button>
+          <div id="edu-content-6" class="edu-card-body" hidden>
+            <p>Stop the spread of misinformation during elections:</p>
+            <div class="tips-grid">
+              <div class="tip-box"><strong>Check the Source:</strong> Is the news from a verified ECI handle or major news outlet?</div>
+              <div class="tip-box"><strong>Look for Official Logos:</strong> Official circulars always have authorized logos and signatures.</div>
+              <div class="tip-box"><strong>Verify via ECI Website:</strong> Visit <em>eci.gov.in</em> for all official announcements.</div>
+              <div class="tip-box"><strong>Don't Panic:</strong> Rumors about "voting cancelled" or "machine errors" are often fakes.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Assistant Module -->
+    <section id="module-assistant" class="module">
+      <div class="chat-container">
+        <!-- Chip Bar -->
+        <div class="chip-bar chip-scroll">
+          <button class="chip" aria-label="How to Vote"><span class="chip-text">How to Vote</span></button>
+          <button class="chip" aria-label="Election Process"><span class="chip-text">Election Process</span></button>
+          <button class="chip" aria-label="Lok Sabha"><span class="chip-text">Lok Sabha</span></button>
+          <button class="chip" aria-label="Rajya Sabha"><span class="chip-text">Rajya Sabha</span></button>
+          <button class="chip" aria-label="EVM & VVPAT"><span class="chip-text">EVM & VVPAT</span></button>
+          <button class="chip" aria-label="Voter Rights"><span class="chip-text">Voter Rights</span></button>
+          <button class="chip" aria-label="NOTA"><span class="chip-text">NOTA</span></button>
+          <button class="chip" aria-label="Model Code of Conduct"><span class="chip-text">Model Code of Conduct</span></button>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area" id="chat-area" role="log" aria-live="polite">
+          <div class="msg-row ai-row" id="welcome-msg">
+            <div class="msg-avatar ai-avatar">🤖</div>
+            <div class="msg-bubble ai-bubble">
+              <p>👋 Hello! I'm your <strong>Election Guide AI</strong>. How can I assist you with the democratic process today?</p>
+            </div>
+          </div>
+          <div class="typing-indicator" id="typing-indicator" style="display: none;">
+            <div class="typing-bubble">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="input-bar">
+          <form id="chat-form" class="chat-form">
+            <textarea id="user-input" rows="1" maxlength="300" placeholder="Ask about elections, voting..." aria-label="Chat input"></textarea>
+            <div class="input-actions">
+              <span id="char-counter" class="char-counter">0 / 300</span>
+              <button type="submit" id="send-btn" class="send-btn" aria-label="Send message" disabled>➤</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TIMELINE MODULE ─────────────────────────────────────── -->
+    <section id="module-timeline" class="module">
+      <div class="module-header">
+        <h2 class="module-title">⏱️ Election Timeline Center</h2>
+        <p class="module-subtitle">Track every stage of the election process</p>
+      </div>
+      <div class="timeline-progress-wrap">
+        <div class="timeline-progress-label">
+          <span>Progress</span>
+          <span id="timeline-progress-pct">0%</span>
+        </div>
+        <div class="timeline-progress-bar"><div class="timeline-progress-fill" id="timeline-progress-fill"></div></div>
+      </div>
+      <div class="timeline-container" id="timeline-container"></div>
+      <div class="stage-detail-panel" id="stage-detail-panel" style="display:none;"></div>
+    </section>
+
+    <!-- ── POLLING SUPPORT MODULE ───────────────────────────────── -->
+    <section id="module-polling" class="module">
+      <div class="module-header">
+        <h2 class="module-title">🗳️ Polling Support Center</h2>
+        <p class="module-subtitle">Everything you need on polling day</p>
+      </div>
+
+      <!-- Section 1: Booth Locator -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">📍 Booth Locator</h3>
+        <div class="booth-search-row">
+          <input type="text" id="booth-search-input" class="booth-input" placeholder="Enter your area, pincode or ward…" aria-label="Search for polling booth">
+          <button class="booth-search-btn" id="booth-search-btn">Search</button>
+        </div>
+        <div class="booth-results" id="booth-results">
+          <div class="booth-card">
+            <div class="booth-info"><strong>Government Senior Secondary School</strong><span>Sector 14, Rohini, Delhi – 110085</span><span class="booth-dist">0.8 km away</span></div>
+            <a href="https://maps.google.com" target="_blank" class="directions-btn">Directions →</a>
+          </div>
+          <div class="booth-card">
+            <div class="booth-info"><strong>Municipal Primary School No. 3</strong><span>Block C, Pitampura, Delhi – 110034</span><span class="booth-dist">1.4 km away</span></div>
+            <a href="https://maps.google.com" target="_blank" class="directions-btn">Directions →</a>
+          </div>
+          <div class="booth-card">
+            <div class="booth-info"><strong>Community Centre Hall B</strong><span>Pocket 7, Dwarka, Delhi – 110075</span><span class="booth-dist">2.1 km away</span></div>
+            <a href="https://maps.google.com" target="_blank" class="directions-btn">Directions →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Voting Timings -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">🕖 Voting Timings</h3>
+        <div class="timing-card">
+          <div class="timing-display"><span class="timing-big">7:00 AM</span><span class="timing-sep">—</span><span class="timing-big">6:00 PM</span></div>
+          <p class="timing-note">⚠️ Timings may vary by constituency. Check your voter slip or the official ECI website for exact booth timing.</p>
+        </div>
+      </div>
+
+      <!-- Section 3: Accepted IDs -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">🪪 Accepted Identity Documents</h3>
+        <div class="id-grid">
+          <div class="id-card">🗳️<span>Voter ID (EPIC)</span></div>
+          <div class="id-card">🔷<span>Aadhaar Card</span></div>
+          <div class="id-card">📘<span>Passport</span></div>
+          <div class="id-card">🚗<span>Driving Licence</span></div>
+          <div class="id-card">💳<span>PAN Card</span></div>
+          <div class="id-card">🌾<span>MNREGA Job Card</span></div>
+          <div class="id-card">🏦<span>Bank Passbook</span></div>
+          <div class="id-card">📱<span>Smart Card</span></div>
+        </div>
+      </div>
+
+      <!-- Section 4: Accessibility Support -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">♿ Accessibility Support</h3>
+        <div class="access-grid">
+          <div class="access-card"><span class="access-icon">♿</span><strong>Wheelchair Access</strong><p>Ramps and accessible entry at all polling booths mandated by ECI.</p></div>
+          <div class="access-card"><span class="access-icon">👁️</span><strong>Visually Impaired</strong><p>Braille ballot information available. Assistance permitted inside booth.</p></div>
+          <div class="access-card"><span class="access-icon">👴</span><strong>Elderly Priority</strong><p>Senior citizens (80+) and persons with disability get priority queue access.</p></div>
+          <div class="access-card"><span class="access-icon">📋</span><strong>Braille Ballot</strong><p>Braille-enabled ballot sheets available on request at the presiding officer's desk.</p></div>
+        </div>
+      </div>
+
+      <!-- Section 5: Emergency Helplines -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">📞 Emergency Helplines</h3>
+        <div class="helpline-grid">
+          <div class="helpline-card helpline-primary"><span class="helpline-num">1950</span><span class="helpline-label">National Voter Helpline (ECI)</span></div>
+          <div class="helpline-card helpline-women"><span class="helpline-num">1091</span><span class="helpline-label">Women Helpline</span></div>
+          <div class="helpline-card helpline-disable"><span class="helpline-num">1800-111-555</span><span class="helpline-label">Disability Support</span></div>
+          <div class="helpline-card helpline-police"><span class="helpline-num">100</span><span class="helpline-label">Police Emergency</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RESULTS HUB MODULE ─────────────────────────────────── -->
+    <section id="module-results" class="module">
+
+      <!-- Counting Status -->
+      <div class="module-header">
+        <h2 class="module-title">📊 Results & Counting Hub</h2>
+        <div class="results-disclaimer-banner">
+          ⚠️ <strong>Trends shown here are NOT final results.</strong> Official results are declared by the Election Commission of India only.
+        </div>
+      </div>
+
+      <!-- Counting Status Card -->
+      <div class="counting-status-card">
+        <h3>Counting Status</h3>
+        <div class="counting-stats">
+          <div class="stat-item"><span class="stat-num">543</span><span class="stat-label">Total Seats</span></div>
+          <div class="stat-item stat-complete"><span class="stat-num" id="seats-complete">312</span><span class="stat-label">Counting Complete</span></div>
+          <div class="stat-item stat-pending"><span class="stat-num" id="seats-pending">231</span><span class="stat-label">Pending</span></div>
+        </div>
+        <div class="counting-progress-bar"><div class="counting-progress-fill" style="width:57.5%"></div></div>
+        <p class="counting-note">57.5% seats reported • Last updated: 08 Feb 2029, 14:32 IST</p>
+      </div>
+
+      <!-- Party Summary Grid -->
+      <div class="party-summary-grid" id="party-summary-grid"></div>
+
+      <!-- Results Table -->
+      <div class="results-table-section">
+        <h3>Constituency-wise Trends</h3>
+        <div class="table-responsive">
+          <table class="results-table" aria-label="Constituency results table">
+            <thead>
+              <tr><th>Constituency</th><th>Leading Candidate</th><th>Party</th><th>Votes</th><th>Status</th></tr>
+            </thead>
+            <tbody id="results-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Historical Comparison -->
+      <div class="historical-section">
+        <h3>Historical Comparison</h3>
+        <div class="historical-grid">
+          <div class="historical-card">
+            <h4>2024 General Election</h4>
+            <p>NDA Alliance: <strong>293 seats</strong></p>
+            <p>INDIA Alliance: <strong>232 seats</strong></p>
+            <p>Others: <strong>18 seats</strong></p>
+          </div>
+          <div class="historical-card">
+            <h4>2019 General Election</h4>
+            <p>NDA Alliance: <strong>353 seats</strong></p>
+            <p>UPA Alliance: <strong>91 seats</strong></p>
+            <p>Others: <strong>99 seats</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate Portal (moved into results) -->
+      <div class="module-header" style="margin-top:32px;">
+        <h2 class="module-title">🧑 Candidate Information Portal</h2>
+        <div class="candidate-disclaimer">⚠️ <strong>Factual public information only.</strong> This portal displays no rankings, recommendations, or endorsements of any candidate or party.</div>
+      </div>
+      <div class="candidate-search-row">
+        <input type="text" id="candidate-search" class="booth-input" placeholder="Search by constituency…" aria-label="Search constituency" maxlength="100">
+        <select id="filter-state" class="filter-select" aria-label="Filter by state">
+          <option value="">All States</option>
+          <option>Delhi</option><option>Maharashtra</option><option>Tamil Nadu</option><option>Uttar Pradesh</option>
+        </select>
+        <select id="filter-type" class="filter-select" aria-label="Filter by election type">
+          <option value="">All Types</option>
+          <option>Lok Sabha</option><option>Vidhan Sabha</option>
+        </select>
+      </div>
+      <div class="candidate-grid" id="candidate-grid"></div>
+    </section>
+
+    <!-- ── HELP / COMPLAINT / MISINFORMATION MODULE ───────────── -->
+    <section id="module-help" class="module">
+      <div class="module-header">
+        <h2 class="module-title">ℹ️ Complaint & Help Center</h2>
+        <p class="module-subtitle">Submit grievances directly to the Election Commission grievance system</p>
+      </div>
+
+      <!-- Complaint Form -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">📋 Submit a Complaint</h3>
+        <p class="complaint-note">All complaints are routed to official Election Commission grievance systems.</p>
+        <form id="complaint-form" class="complaint-form" novalidate>
+          <div class="form-group">
+            <label for="complaint-category" class="form-label">Category *</label>
+            <select id="complaint-category" class="filter-select" aria-label="Complaint category" required>
+              <option value="">Select a category</option>
+              <option value="name_missing">Name Missing from Voter List</option>
+              <option value="booth_access">Booth Access Issue</option>
+              <option value="misconduct">Officer Misconduct</option>
+              <option value="bribery">Bribery Attempt</option>
+              <option value="violence">Violence / Intimidation</option>
+              <option value="evm_issue">Technical EVM Issue</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="complaint-desc" class="form-label">Description * <span id="desc-counter" class="char-counter">0 / 500</span></label>
+            <textarea id="complaint-desc" class="complaint-textarea" rows="4" maxlength="500" placeholder="Describe the issue in detail…" aria-label="Complaint description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="complaint-location" class="form-label">Location</label>
+            <input type="text" id="complaint-location" class="booth-input" placeholder="Constituency / Booth / Area" maxlength="200" aria-label="Complaint location">
+          </div>
+          <div class="form-group">
+            <label for="complaint-phone" class="form-label">Contact Number (Optional)</label>
+            <input type="tel" id="complaint-phone" class="booth-input" placeholder="10-digit mobile number" maxlength="10" pattern="[0-9]{10}" aria-label="Contact phone number">
+          </div>
+          <button type="submit" class="booth-search-btn" id="complaint-submit-btn" aria-label="Submit complaint">Submit Complaint</button>
+        </form>
+        <div id="complaint-success" class="complaint-success-card" style="display:none;"></div>
+      </div>
+
+      <!-- Track Complaint -->
+      <div class="ps-section">
+        <h3 class="ps-section-title">🔍 Track Your Complaint</h3>
+        <div class="booth-search-row">
+          <input type="text" id="track-ref-input" class="booth-input" placeholder="Enter reference number (e.g. ECS-1234567890)" maxlength="30" aria-label="Complaint reference number">
+          <button class="booth-search-btn" id="track-btn" aria-label="Track complaint status">Track</button>
+        </div>
+        <div id="track-result" class="track-result-box" style="display:none;"></div>
+      </div>
+
+      <!-- Anti-Misinformation Center -->
+      <div class="ps-section">
+        <div class="antifake-header">
+          <h3 class="ps-section-title">✅ Official Clarifications — Verified by Election Commission</h3>
+          <button class="report-fake-btn" id="report-fake-btn" aria-label="Report fake news or misinformation">🚨 Report Fake News</button>
+        </div>
+        <div class="myths-container" id="antifake-myths-container"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation (Mobile) -->
+  <nav class="mobile-nav">
+    <a href="#" class="nav-item active" data-target="module-home">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="#" class="nav-item" data-target="module-education">
+      <span class="nav-icon">📚</span>
+      <span>Education</span>
+    </a>
+    <a href="#" class="nav-item" data-target="module-assistant">
+      <span class="nav-icon">🤖</span>
+      <span>Assistant</span>
+    </a>
+    <a href="#" class="nav-item" data-target="module-timeline">
+      <span class="nav-icon">⏱️</span>
+      <span>Timeline</span>
+    </a>
+    <a href="#" class="nav-item" data-target="module-polling">
+      <span class="nav-icon">🗳️</span>
+      <span>Support</span>
+    </a>
+    <a href="#" class="nav-item" data-target="module-results">
+      <span class="nav-icon">📊</span>
+      <span>Results</span>
+    </a>
+    <a href="#" class="nav-item" data-target="module-help">
+      <span class="nav-icon">ℹ️</span>
+      <span>Help</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>This platform provides educational information only and is not affiliated with any political party.</p>
+    </div>
+  </footer>
+
+  <script src="brain.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
