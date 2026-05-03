@@ -37,15 +37,15 @@
   </header>
 
   <!-- Navigation Bar (Desktop) -->
-  <nav class="desktop-nav">
+  <nav class="desktop-nav" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#" class="nav-item active" data-target="module-home">Home</a>
-      <a href="#" class="nav-item" data-target="module-education">Education Hub</a>
-      <a href="#" class="nav-item" data-target="module-assistant">Ask Assistant</a>
-      <a href="#" class="nav-item" data-target="module-timeline">Timeline</a>
-      <a href="#" class="nav-item" data-target="module-polling">Polling Support</a>
-      <a href="#" class="nav-item" data-target="module-results">Results</a>
-      <a href="#" class="nav-item" data-target="module-help">Help</a>
+      <a href="#" class="nav-item active" data-target="module-home" aria-label="Go to Home Dashboard">Home</a>
+      <a href="#" class="nav-item" data-target="module-education" aria-label="Explore Voter Education Hub">Education Hub</a>
+      <a href="#" class="nav-item" data-target="module-assistant" aria-label="Open AI Election Assistant">Ask Assistant</a>
+      <a href="#" class="nav-item" data-target="module-timeline" aria-label="View Election Timeline">Timeline</a>
+      <a href="#" class="nav-item" data-target="module-polling" aria-label="Get Polling Day Support">Polling Support</a>
+      <a href="#" class="nav-item" data-target="module-results" aria-label="View Election Results & Trends">Results</a>
+      <a href="#" class="nav-item" data-target="module-help" aria-label="Get Help and FAQs">Help</a>
     </div>
   </nav>
 
@@ -86,29 +86,29 @@
       </div>
 
       <!-- Quick Actions Grid -->
-      <div class="quick-actions-grid">
-        <button class="action-btn" id="btn-open-education">
-          <span class="action-icon">📚</span>
+      <div class="quick-actions-grid" role="group" aria-label="Quick Access Actions">
+        <button class="action-btn" id="btn-open-education" aria-label="Open Voter Education Hub">
+          <span class="action-icon" aria-hidden="true">📚</span>
           <span class="action-label">Understand Election</span>
         </button>
-        <button class="action-btn">
-          <span class="action-icon">📍</span>
+        <button class="action-btn" aria-label="Find my Polling Booth">
+          <span class="action-icon" aria-hidden="true">📍</span>
           <span class="action-label">Find Polling Booth</span>
         </button>
-        <button class="action-btn">
-          <span class="action-icon">✅</span>
+        <button class="action-btn" aria-label="Check my Eligibility to Vote">
+          <span class="action-icon" aria-hidden="true">✅</span>
           <span class="action-label">Check Eligibility</span>
         </button>
-        <button class="action-btn" id="btn-open-assistant">
-          <span class="action-icon">🤖</span>
+        <button class="action-btn" id="btn-open-assistant" aria-label="Start conversation with AI Assistant">
+          <span class="action-icon" aria-hidden="true">🤖</span>
           <span class="action-label">Ask AI Assistant</span>
         </button>
-        <button class="action-btn">
-          <span class="action-icon">❓</span>
+        <button class="action-btn" aria-label="Read Frequently Asked Questions">
+          <span class="action-icon" aria-hidden="true">❓</span>
           <span class="action-label">View FAQs</span>
         </button>
-        <button class="action-btn">
-          <span class="action-icon">📊</span>
+        <button class="action-btn" aria-label="See Election Results and Trends">
+          <span class="action-icon" aria-hidden="true">📊</span>
           <span class="action-label">See Results</span>
         </button>
       </div>
@@ -542,25 +542,25 @@
   </main>
 
   <!-- Bottom Navigation (Mobile) -->
-  <nav class="mobile-nav">
-    <a href="#" class="nav-item active" data-target="module-home">
-      <span class="nav-icon">🏠</span>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#" class="nav-item active" data-target="module-home" aria-label="Home Dashboard">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
       <span>Home</span>
     </a>
-    <a href="#" class="nav-item" data-target="module-education">
-      <span class="nav-icon">📚</span>
+    <a href="#" class="nav-item" data-target="module-education" aria-label="Voter Education Hub">
+      <span class="nav-icon" aria-hidden="true">📚</span>
       <span>Education</span>
     </a>
-    <a href="#" class="nav-item" data-target="module-assistant">
-      <span class="nav-icon">🤖</span>
+    <a href="#" class="nav-item" data-target="module-assistant" aria-label="AI Assistant">
+      <span class="nav-icon" aria-hidden="true">🤖</span>
       <span>Assistant</span>
     </a>
-    <a href="#" class="nav-item" data-target="module-timeline">
-      <span class="nav-icon">⏱️</span>
+    <a href="#" class="nav-item" data-target="module-timeline" aria-label="Timeline">
+      <span class="nav-icon" aria-hidden="true">⏱️</span>
       <span>Timeline</span>
     </a>
-    <a href="#" class="nav-item" data-target="module-polling">
-      <span class="nav-icon">🗳️</span>
+    <a href="#" class="nav-item" data-target="module-polling" aria-label="Polling Support">
+      <span class="nav-icon" aria-hidden="true">🗳️</span>
       <span>Support</span>
     </a>
     <a href="#" class="nav-item" data-target="module-results">
